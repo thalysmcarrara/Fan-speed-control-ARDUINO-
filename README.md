@@ -12,6 +12,11 @@ Posteriomente pretendo postar mais informações do projeto pra quem tiver o mes
 
 ---
 
+🔴**Tecnologia utilizada**
+- arduino
+
+---
+
 [linkedin](https://www.linkedin.com/in/thalys-matias-carrara/)       
 
 **Abraço!**
