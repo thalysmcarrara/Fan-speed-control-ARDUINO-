@@ -18,16 +18,10 @@ void setup() {
 void Controle_velocidade(float tensao, int potenciometro){
   Serial.print("Tensao= ");
   Serial.println(tensao);
-  //if(tensao < 4.0){
-   digitalWrite(pwm,potenciometro);
-   digitalWrite(direction1,LOW);
-    digitalWrite(direction2,HIGH);
- // }else{
-    //digitalWrite(pwm,86);
-    //digitalWrite(direction1,LOW);
-   // digitalWrite(direction2,HIGH);
-    //Serial.println("MOTOR EM POTENCIA MÁXIMA");
-    //}
+  digitalWrite(pwm,potenciometro);
+  digitalWrite(direction1,LOW);
+  digitalWrite(direction2,HIGH);
+ 
   }
 
 void loop() {
@@ -36,19 +30,13 @@ void loop() {
  float vout = 0;
  
  potenciometro = analogRead(pot);
- //Serial.println(potenciometro);
+ 
 
  potenciometro = map(potenciometro, 0, 1023, 0, 255);
- //Serial.print("potenciometro= ");
- //Serial.println(potenciometro);
 
  duty_cycle = map(potenciometro,0,255,0,100);
- //Serial.print("duty cycle= ");
- //Serial.println(duty_cycle);
 
- vout = (duty_cycle/100.0)*5.0;
- //Serial.print("Vout= ");
- //Serial.println(vout);
+ vout = (duty_cycle/100.0)*6.0;
 
  Controle_velocidade(vout,potenciometro);
  
